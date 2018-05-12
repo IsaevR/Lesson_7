@@ -4,6 +4,7 @@ using System.Text;
 
 namespace GameProj
 {
+    // абстрактыный класс, который принимает в качестве аргументов координаты для "пикселей"
     abstract class Shape : IShape
     {
         public int X { get; set; }

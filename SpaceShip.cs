@@ -4,6 +4,7 @@ using System.Text;
 
 namespace GameProj
 {
+    // этот класс задает координаты и цвет "пикселям" которые формирую космический корабль
     class SpaceShip : Shape
     {
         public ConsoleColor Color { get; set; }

@@ -12,17 +12,9 @@ namespace GameProj
         static void Main(string[] args)
         {
             Console.WriteLine("\n\n\n\n\n\n\n\t\t\t ДO ЗАПУСКА ОСТАЛОСЬ ");
-            DisplayCountDown();
-           // var origRow = Console.CursorTop;
-           // for (int a = 10; a >= 0; a--)
-           // {
-           //     Console.SetCursorPosition(0, origRow);
-           //     Console.Write("\n\n\t\t\t\t {0}", a);
-           //     System.Threading.Thread.Sleep(1000);
-           // }
-           // Console.SetCursorPosition( 0, origRow);
-           ////Console.Write("Generating Preview done.....");
-
+            DisplayTimer();       // метод - таймер
+           
+            // создаем список в котором хранятся звезды с координатами, космический корабль и реактивная плазма
             var shapes = new List<IShape>();
             shapes.Add(new BackGrStar(5, 5));
             shapes.Add(new BackGrStar(9, 2));
@@ -46,16 +38,18 @@ namespace GameProj
             shapes.Add(new BackGrStar(57, 4));
             shapes.Add(new BackGrStar(43, 15));
            
-            shapes.Add(new SpaceShip(25, 25, ConsoleColor.Yellow));
-            shapes.Add(new Fire(25, 30, ConsoleColor.Blue));
+            shapes.Add(new SpaceShip(25, 25, ConsoleColor.Yellow)); //  записываем в List космический корабыль
+
+            shapes.Add(new Fire(25, 30, ConsoleColor.Blue));  // записываем в List реактивную плазму
 
             var engine = new Render();
-            engine.Draw(shapes);
+            engine.Draw(shapes);       
 
 
             Console.ReadKey();
         }
-        static void DisplayCountDown()
+        // Метод показывает таймер с обратным отсчетом
+        static void DisplayTimer()
         {
             for (int i = 9; i >= 0; --i)
             {
