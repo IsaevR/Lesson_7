@@ -4,6 +4,7 @@ using System.Text;
 
 namespace GameProj
 {
+    // этот клас рисует анимированное плямя 
     class Fire :Shape
     {
         public ConsoleColor Color { get; set; }

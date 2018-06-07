@@ -4,6 +4,7 @@ using System.Text;
 
 namespace GameProj
 {
+    
     interface IRender
     {
         void Draw(IEnumerable<IShape> shapes);

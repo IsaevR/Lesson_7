@@ -4,6 +4,7 @@ using System.Text;
 
 namespace GameProj
 {
+    // этот класс создает  белую точку (в качестве звезды на заднем фоне )
     class BackGrStar: Shape
     {
 
